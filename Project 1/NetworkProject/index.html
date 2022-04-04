@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ENCS3320 Simple Webserver</title>
+	<style type="text/css">
+		body{
+			background-color: rgb(217, 217, 217);
+		}
+		div{
+			width: 100%;
+		}
+		span#courseTitle{
+			color: green;
+		}
+		img{
+			width: 40%;
+			height: 100%;
+		}
+		#rightImg{
+			margin-left: 25px;
+		}
+		ul{
+			list-style-type: none;
+		}
+		#info #hobbies, #info #projects{
+			width: 40%;
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<div style="text-align: center;">
+		<h1>Welcome to our course <span id="courseTitle">Computer Networks</span></h1>
+		
+		<h2>Groupe members names and numbers:</h2>
+		<ul>
+			<li>Ahmad Hamad 1180060</li>
+			<li>Baraa Atta 1180445</li>
+		</ul>
+		<br>
+		<h2>Informations about group members:</h2>
+		<div id="info">
+			<div id="hobbies">
+				<h3>Hobbies:</h3>
+				<ul>
+					<li>Playing football</li>
+					<li>Playing video games</li>
+					<li>Programming</li>
+				</ul>
+			</div>
+			<div id="projects">
+				<h3>Projects:</h3>
+				<ul>
+					<li>Networking - simple web server</li>
+					<li>OS - CPU scheduling algorithms</li>
+					<li>Computer Vision - text line extraction</li>
+				</ul>
+			</div>
+			
+		</div>
+		<h2>Images</h2>
+        <img src="img1.png">
+		<img id="rightImg" src="img2.jpg">
+	</div>
+</body>
+</html>
