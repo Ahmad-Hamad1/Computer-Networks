@@ -24,6 +24,15 @@ while True:
         connectionSocket.send('Content-Type: text/html \r\n'.encode())  # Set the type to HTML page.
         connectionSocket.send('\r\n'.encode())  # End of the header of the response.
         connectionSocket.send(indexCode.encode())  # Send HTML code after encoding.
+
+    elif url == '/style.css':  # The css file has a separate request from the HTML
+        index = open('style.css')
+        indexCode = index.read()  # Read the index.html file.
+        index.close()  # Close the file.
+        connectionSocket.send('HTTP/1.1 200 ok\r\n'.encode())  # Tell the client that everything is ok and the page is sent.
+        connectionSocket.send('Content-Type: text/css \r\n'.encode())  # Set the type to HTML page.
+        connectionSocket.send('\r\n'.encode())  # End of the header of the response.
+        connectionSocket.send(indexCode.encode())  # Send HTML code after encoding.
     elif url.endswith('.jpg') or url.endswith('.jpg/') or url.endswith('.png') or url.endswith('.png/'):
         imageName = url.split('/')[1]  # Get image name.
         imageType = imageName.split('.')[1]  # Get image type.
