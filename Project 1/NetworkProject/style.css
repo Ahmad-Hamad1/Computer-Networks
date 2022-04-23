@@ -1,0 +1,25 @@
+		body{
+			background-color: rgb(217, 217, 217);
+		}
+		div{
+			width: 100%;
+		}
+		span#courseTitle{
+			color: green;
+		}
+		img{
+			width: 40%;
+			height: 100%;
+		}
+		#rightImg{
+			margin-left: 25px;
+		}
+		ul{
+			list-style-type: none;
+		}
+		#info #hobbies, #info #projects{
+			width: 40%;
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+		}
