@@ -47,6 +47,7 @@ while True:
         imageData = image.read()
         image.close()
         connectionSocket.send(imageData)
+
     elif url == "/sortName" or url == "/sortName/":
         connectionSocket.send('HTTP/1.1 200 ok\r\n'.encode())
         connectionSocket.send('Content-Type: text/plain \r\n'.encode())  # Sending plain text.
@@ -65,6 +66,7 @@ while True:
         for i in range(0, len(names)):  # Add each name under names column and each price under prices column.
             message += str(names[i]) + " " * (numberOfSpaces - len(names[i])) + "| " + str(prices[i]) + "\n"
         connectionSocket.send(message.encode())  # Send the sorted data as a plain text.
+
     elif url == "/sortPrice" or url == "/sortPrice/":
         connectionSocket.send('HTTP/1.1 200 ok\r\n'.encode())
         connectionSocket.send('Content-Type: text/plain \r\n'.encode())
@@ -82,6 +84,7 @@ while True:
         for i in range(0, len(prices)):
             message += str(names[i]) + " " * (numberOfSpaces - len(names[i])) + "| " + str(prices[i]) + "\n"
         connectionSocket.send(message.encode())
+
     else:
         notFound = open('404.html')
         notFoundCode = notFound.read()  # Read the 404 Not Found error HTML page.
